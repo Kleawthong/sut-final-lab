@@ -9,7 +9,7 @@ import (
 
 func TestReacorddata(t *testing.T) {
 	g := NewGomegaWithT(t)
-	t.Run("Name can not be blan", func(t *testing.T) {
+	t.Run("not valid", func(t *testing.T) {
 		cu := Customer{
 			Name:       "sdfsdfsfd",
 			Email:      "asdasdasd@gmail.com",
@@ -22,7 +22,7 @@ func TestReacorddata(t *testing.T) {
 		g.Expect(err.Error()).To(Equal("not valid"))
 	})
 
-	t.Run("Name can not be blan", func(t *testing.T) {
+	t.Run("not valid", func(t *testing.T) {
 		cu := Customer{
 			Name:       "sdfsdfsfd",
 			Email:      "asdasdasd@gmail.com",
@@ -34,7 +34,7 @@ func TestReacorddata(t *testing.T) {
 		g.Expect(err).ToNot(BeNil())
 		g.Expect(err.Error()).To(Equal("not valid"))
 	})
-	t.Run("Name can not be blan", func(t *testing.T) {
+	t.Run("not valid", func(t *testing.T) {
 		cu := Customer{
 			Name:       "sdfsdfsfd",
 			Email:      "asdasdasd@gmail.com",
@@ -46,5 +46,7 @@ func TestReacorddata(t *testing.T) {
 		g.Expect(err).ToNot(BeNil())
 		g.Expect(err.Error()).To(Equal("not valid"))
 	})
+
+
 
 }
